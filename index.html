@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -19,6 +19,10 @@
       tailwind.config = {
         theme: {
           extend: {
+            screens: {
+              '3xl': '1700px',
+              '4xl': '2300px',
+            },
             fontFamily: {
               body: ['Poppins', 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";\n' +
               'font-serif\tfont-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;\n' +
@@ -35,42 +39,54 @@
         }
       }
     </script>
+    <style>
+        .bg-white {
+            background-color: #50EAFF !important;
+        }
+
+        .bg-white\/50 {
+            background-color: #ffffff !important;
+        }
+    </style>
 </head>
 <body class="font-body">
-<section class="relative bg-[url('/assets/images/bg-mobile.svg')] lg:bg-[url('/assets/images/bg.svg')] bg-cover">
-    <div class="flex flex-row items-center flex-wrap justify-center lg:flex-nowrap h-screen px-[2rem] py-[5rem] md:p-[5rem]">
+<section class="relative bg-[url('assets/images/bg-mobile.svg')] lg:bg-[url('assets/images/bg.svg')] bg-cover">
+    <div class="relative flex flex-row items-center flex-wrap justify-center lg:justify-start lg:flex-nowrap h-screen px-[2rem] py-[5rem] md:p-[5rem]">
         <div data-aos="zoom-in"
-             class="text-white flex flex-col gap-8 justify-center items-center lg:items-start text-center lg:text-start">
-            <h3 class="text-[20px] 2xl:text-[28px]">Jadi Lebih Yakin PTN bersama</h3>
-            <img class="w-[225px] md:w-[350px] lg:w-auto" src="/assets/images/logo-ptn.svg"
+             class="z-50 text-white flex flex-col gap-8 justify-center items-center lg:items-start text-center lg:text-start">
+            <h3 class="text-[20px] lg:text-[22px] 2xl:text-[30px] 3xl:text-[40px] 4xl:text-[50px]">Jadi Lebih Yakin PTN bersama</h3>
+            <img class="w-[225px] md:w-[350px] 2xl:w-[600px] 4xl:w-[900px]" src="assets/images/logo-ptn.svg"
                  alt="logo-ptn">
-            <p class="text-md md:text-xl font-bold tracking-wide">Yuk ikut <span
+            <p class="text-md md:text-lg 2xl:text-3xl 4xl:text-4xl font-bold tracking-wide">Yuk ikut <span
                     class="text-[#FFD600]">Tes Minat & Kepribadian</span><br/>
                 biar lebih yakin pilih jurusan <span class="text-[#FFD600]">PTN</span></p>
             <a href="https://zonapintar-app.priambodo.org/"
-               class="flex justify-center bg-[#F7A81E] shadow-button-orange rounded-[30px] p-[12px] w-[200px] md:w-[365px] text-lg md:text-xl font-semibold">
+               class="flex justify-center bg-[#F7A81E] shadow-button-orange rounded-[30px] p-[12px] 3xl:p-[20px] w-[200px] md:w-[300px] 3xl:w-[450px] 4xl:w-[600px] text-lg md:text-lg 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl font-semibold">
                 Tes Sekarang
             </a>
         </div>
-        <div data-aos="zoom-in" class="flex justify-end">
-            <div class="hidden md:block">
-                <img src="/assets/images/ptn-list.svg" alt="ptn">
+        <div data-aos="zoom-in" class="z-0 flex justify-end 2xl:w-full absolute py-40 2xl:py-44 3xl:py-0 3xl:h-full pr-0">
+            <div class="hidden lg:block 2xl:py-40">
+                <img class="lg:h-5/6 lg:w-full 3xl:h-full" src="assets/images/ptn-list.svg" alt="ptn">
             </div>
-            <div class="block md:hidden mt-14">
-                <img src="/assets/images/ptn-list-mobile.svg" alt="ptn">
+        </div>
+
+        <div data-aos="zoom-in" class="z-0 flex justify-end">
+            <div class="block lg:hidden mt-14">
+                <img class="md:w-[50rem]" src="assets/images/ptn-list-mobile.svg" alt="ptn">
             </div>
         </div>
     </div>
 </section>
 
-<section class="relative bg-[url('/assets/images/bg-section2.svg')] bg-cover p-3 md:p-[5rem]">
+<section class="relative bg-[url('assets/images/bg-section2.svg')] bg-cover p-3 md:p-[5rem]">
     <div data-aos="zoom-in" class="relative mx-30 2xl:mx-60">
-        <div class="flex flex-row gap-10 my-10 mx-20 h-3">
+        <div class="flex flex-row gap-1 lg:gap-10 my-10 mx-20 lg:mx-40 h-3">
             <div class="w-1/4 bg-[#F89500] rounded-lg"></div>
             <div class="w-1/2 bg-[#6AB6FF] rounded-lg"></div>
             <div class="w-1/4 bg-[#F89500] rounded-lg"></div>
         </div>
-        <div class="bg-[url('/assets/images/slides/bg.png')] bg-cover shadow-slider rounded-[36px] p-5 max-w-full">
+        <div class="bg-[url('assets/images/slides/bg.png')] bg-cover shadow-slider rounded-[36px] p-5 mx-10 max-w-full">
             <div class="border-4 border-[#85aad6] rounded-[36px]">
                 <div id="indicators-carousel" class="relative h-[730px] lg:h-[650px]" data-carousel="static">
                     <!-- Carousel wrapper -->
@@ -251,7 +267,7 @@
                                     <div class="flex flex-row items-center gap-5">
                                         <img class="w-[30px] lg:w-auto" src="assets/images/slides/5/lonceng.svg">
                                         <p class="text-white text-sm md:text-md lg:text-lg xl:text-xl">Terdapat informasi peluang masuk <span
-                                                class="text-[#FAFF00]">PTN?</span>
+                                                class="text-[#FAFF00]">PTN</span>
                                             pilihan</p>
                                     </div>
                                     <div class="flex flex-row items-center gap-5">
@@ -278,22 +294,16 @@
                         <button type="button"
                                 class="z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                 data-carousel-prev>
-                            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-                                     fill="none"
-                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 19l-7-7 7-7"></path>
-                                </svg>
+                            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 group-hover:bg-white/50">
+                                <img src="assets/images/slides/control.png">
                                 <span class="sr-only">Previous</span>
                             </div>
                         </button>
 
-                        <div class="flex gap-4">
-                            <button id="carousel-indicator-1" type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                        <div class="flex gap-4 text-white/30">
+                            <button id="carousel-indicator-1" type="button" class="w-3 h-3 rounded-full !bg-white-800/50 hover:!bg-white-800" aria-current="true" aria-label="Slide 1"
                                     data-carousel-slide-to="0"></button>
-                            <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                            <button id="indicator-2" type="button" class="w-3 h-3 rounded-full !bg-white-800/50 hover:!bg-white-800 dark:bg-gray-800/50 dark:hover:bg-gray-800 bg-white" aria-current="false" aria-label="Slide 2"
                                     data-carousel-slide-to="1"></button>
                             <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
                                     data-carousel-slide-to="2"></button>
@@ -307,14 +317,8 @@
                                 class="z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                 data-carousel-next
                         >
-                            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-                                     fill="none"
-                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
-                                </svg>
+                            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 group-hover:bg-white/50">
+                                <img class="rotate-180" src="assets/images/slides/control.png">
                                 <span class="sr-only">Next</span>
                             </div>
                         </button>
@@ -322,51 +326,55 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-row gap-10 my-10 mx-20 h-3">
+        <div class="flex flex-row gap-1 lg:gap-10 my-10 mx-20 lg:mx-40 h-3">
             <div class="w-1/4 bg-[#F89500] rounded-lg"></div>
             <div class="w-1/2 bg-[#6AB6FF] rounded-lg"></div>
             <div class="w-1/4 bg-[#F89500] rounded-lg"></div>
         </div>
     </div>
-    <div class="relative h-screen flex flex-col-reverse lg:flex-row items-center justify-end md:justify-between mx-5 mt-20 md:pt-96 lg:pt-80 gap-10 md:gap-20 lg:gap-40">
-        <div data-aos="fade-up" class="md:basis-1/2">
-            <img class="h-50 lg:h-auto" src="assets/images/hp.svg">
+    <div class="relative h-screen flex flex-col-reverse lg:flex-row items-center justify-end md:justify-between mx-5 mt-20 md:pt-96 lg:pt-10 2xl:pt-74 3xl:pt-80 gap-10 md:gap-20 lg:gap-30">
+        <div data-aos="fade-up" class="md:basis-2/3">
+            <img class="h-50 lg:h-[45rem] 2xl:h-[65rem] lg:w-full" src="assets/images/Group 40744.png">
         </div>
-        <div class="flex flex-col text-white md:basis-1/2 gap-10 md:py-30 lg:py-20 px-5 lg:px-40 text-center lg:text-start items-center lg:items-start md:justify-start">
-            <h1 data-aos="zoom-in"  class="text-[20px] md:text-[24px] lg:text-[38px] font-semibold">Saatnya kamu belajar dengan Kelas Pintar!</h1>
-            <p data-aos="fade-up" class="text-base md:text-lg">
-                Mulai dari materi yang lengkap, kelas online interaktif,
-                latihan soal untuk ujian hingga tanya PR
-                sepuasnya. Semua ada di Kelas Pintar!
+        <div class="flex flex-col text-white md:basis-1/3 gap-10 md:py-30 lg:py-20 px-5 lg:px-0 text-center lg:text-start items-center lg:items-start md:justify-start">
+            <h1 data-aos="zoom-in"  class="text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-6xl font-semibold">Saatnya kamu <br class="hidden lg:block"/> belajar dengan <br /> Kelas Pintar!</h1>
+            <p data-aos="fade-up" class="text-base md:text-lg 2xl:text-2xl">
+                Mulai dari materi yang lengkap, kelas <br /> online interaktif,
+                latihan soal untuk ujian <br /> hingga tanya PR
+                sepuasnya. <br /> Semua ada di Kelas Pintar!
             </p>
-            <button onclick="window.location.href = 'https://staging-satrio.kelaspintar.co.id/?registration=true'" data-aos="fade-up" class="z-10 bg-[#F7A81E] shadow-button-orange rounded-[30px] p-[12px] w-[200px] md:w-[269px] text-base md:text-lg md:text-xl font-semibold">
+            <button onclick="window.location.href = 'https://www.kelaspintar.id/?registration=true'" data-aos="fade-up" class="z-10 bg-[#F7A81E] shadow-button-orange rounded-[30px] p-[15px] w-[200px] md:w-[269px] text-base md:text-lg 2xl:text-xl font-semibold">
                 Daftar Sekarang
             </button>
         </div>
 
-        <div class="absolute left-50 top-2">
+        <div class="absolute hidden md:block left-50 top-2">
             <img class="w-3" src="assets/images/star-blue.png" alt="...">
         </div>
 
-        <div class="absolute right-80 bottom-[30rem] md:bottom-[60rem]">
+        <div class="absolute hidden md:block lg:-right-8 2xl:right-14 -top-96">
+            <img class="w-8 2xl:w-10" src="assets/images/star-blue.png" alt="...">
+        </div>
+
+        <div class="absolute right-52 2xl:right-80 bottom-[30rem] md:bottom-[48rem] lg:bottom-[43rem] xl:bottom-[40rem] 2xl:bottom-[48rem]">
+            <img class="w-4" src="assets/images/star-white.png" alt="...">
+        </div>
+
+        <div class="absolute right-10 2xl:right-5 bottom-[30rem] md:bottom-[38rem] xl:bottom-[30rem] 2xl:bottom-[38rem]">
             <img class="w-3" src="assets/images/star-white.png" alt="...">
         </div>
 
-        <div class="absolute right-10 bottom-[30rem] md:bottom-[40rem]">
-            <img class="w-5" src="assets/images/star-white.png" alt="...">
-        </div>
-
-        <div class="absolute right-10 bottom-40">
+        <div class="absolute right-10 bottom-5 lg:right-5 lg:bottom-5 2xl:bottom-20 2xl:right-28">
             <img class="w-5" src="assets/images/star-white.png" alt="...">
         </div>
     </div>
 </section>
 
 <div class="relative">
-    <img class="-mt-[18rem] md:hidden  2xl:-mt-[24rem]" src="/assets/images/kp-footer-wave-blue2.png" alt="">
+    <img class="-mt-[14rem] md:hidden  2xl:-mt-[24rem]" src="assets/images/kp-footer-wave-blue2.png" alt="">
 </div>
-<footer class="relative bg-footer md:bg-[url('/assets/images/bg-footer.svg')] bg-cover h-max -mt-[10px] md:-mt-[21rem]  2xl:-mt-[24rem]">
-    <div class="flex flex-row flex-wrap lg:flex-nowrap gap-10 justify-between px-[2rem] md:px-[5rem] pt-[5rem] md:pt-[35rem] pb-[5rem] md:pt-[32rem] text-white bottom-28">
+<footer class="relative bg-footer md:bg-[url('assets/images/bg-footer.svg')] bg-cover h-max -mt-[10px] md:-mt-[21rem]  2xl:-mt-[24rem]">
+    <div class="flex flex-row flex-wrap lg:flex-nowrap gap-10 justify-between px-[2rem] md:px-[5rem] pt-[5rem] md:pt-[35rem] lg:pt-[25rem] 2xl:pt-[32rem] pb-[1rem] text-white">
         <div data-aos="fade-right" class="flex flex-col gap-10 basis-full md:basis-1/3">
             <h1 class="text-lg font-semibold">Kelas Pintar Indonesia</h1>
             <div>
@@ -460,8 +468,16 @@
   const options = {
     defaultPosition: 0,
     interval: 5000,
+    onNext: () => {
+        carousel.pause()
+    },
+    onPrev: ( ) => {
+        carousel.pause()
+    },
 
     indicators: {
+        activeClasses: 'bg-white',
+        inactiveClasses: 'bg-white/50 hover:bg-white',
       items: [
         {
           position: 0,
@@ -469,7 +485,7 @@
         },
         {
           position: 1,
-          el: document.getElementById('carousel-indicator-2')
+          el: document.getElementById('indicator-2')
         },
         {
           position: 2,
@@ -486,6 +502,7 @@
       ]
     },
   };
+
   const carousel = new Carousel(items, options)
   carousel.cycle()
 
@@ -508,6 +525,9 @@
     mirror: false,
     anchorPlacement: 'top-bottom',
   });
+
+  console.log('masuk')
+  document.getElementById('carousel-indicator-2').classList.remove('dark:bg-gray-800/50 dark:hover:bg-gray-800')
 </script>
 </body>
 </html>
